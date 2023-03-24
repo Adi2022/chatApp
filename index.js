@@ -34,6 +34,6 @@ socket.to(data.room).emit("receive_message",data)
   });
 });
 
-server.listen(`Port is ${PORT}`, () => {
+server.listen(PORT, () => {
   console.log("Server listening");
 });
