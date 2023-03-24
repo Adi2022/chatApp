@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const http = require("http");
 const cors = require("cors");
-
+const PORT=process.env.PORT || 5173
 const { Server } = require("socket.io");
 app.use(cors());
 
@@ -34,6 +34,6 @@ socket.to(data.room).emit("receive_message",data)
   });
 });
 
-server.listen(3001, () => {
+server.listen(`Port is ${PORT}`, () => {
   console.log("Server listening");
 });
